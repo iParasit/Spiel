@@ -7,10 +7,11 @@ import java.awt.event.ActionListener;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Spiel {
-    static Integer myNumber = ThreadLocalRandom.current().nextInt(0, 100 + 1);
     static Integer count = 0;
+    static Integer myNumber = ThreadLocalRandom.current().nextInt(0, 100 + 1);
     static JLabel text = new JLabel("Gebe eine Zahl zwischen 0 - 100 ein");
     static JTextField textField = new JTextField();
+    static JLabel countText = new JLabel(String.valueOf(count));
 
     public static void main(String[] args) {
         openUi();
@@ -23,10 +24,16 @@ public class Spiel {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setDefaultLookAndFeelDecorated(true);
 
+        countText.setBounds(20,20,20,20);
+        countText.addActionListener(new ActionListener() {
+            @Override
+
+            String numberFromCount = countText.getText();
+            Integer countText = Integer.parseInt(numberFromCount);
+
+        });
 
         text.setBounds(50, 50, 500, 30);
-
-
         textField.setBounds(50, 100, 200, 30);
 
         JButton button = new JButton("Abschicken");
@@ -47,6 +54,7 @@ public class Spiel {
         });
 
 
+        frame.add(countText);
         frame.add(text);
         frame.add(textField);
         frame.setLayout(null);
