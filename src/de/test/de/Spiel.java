@@ -24,7 +24,7 @@ public class Spiel {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setDefaultLookAndFeelDecorated(true);
 
-        countText.setBounds(20,20,20,20);
+        countText.setBounds(20,20,100,20);
 
 
         text.setBounds(50, 50, 500, 30);
@@ -61,12 +61,14 @@ public class Spiel {
             text.setText("Richtig geraten! Du hast " + count + " versuche gebraucht!");
         } else {
             count ++;
+            countText.setText("");
             if(number < myNumber) {
                 text.setText("Falsch geraten! Deine Zahl ist zu klein!");
             } else {
                 text.setText("Deine Zahl ist zu Groß!");
             }
             textField.setText("");
+
         }
     }
 }
