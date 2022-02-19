@@ -75,17 +75,18 @@ public class Spiel {
 
         } else {
             count ++;
-            return false;
+
             if(number < myNumber) {
                 text.setText("Deine Zahl ist zu klein!");
+                textField.setText("");
+                countText.setText(String.valueOf("Anzahl der Versuche: " + count));
                 return false;
             } else {
                 text.setText("Deine Zahl ist zu Groß!");
+                textField.setText("");
+                countText.setText(String.valueOf("Anzahl der Versuche: " + count));
                 return false;
             }
-            textField.setText("");
-            countText.setText(String.valueOf("Anzahl der Versuche: " + count));
-
 
         }
     }
