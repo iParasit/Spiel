@@ -25,13 +25,7 @@ public class Spiel {
         frame.setDefaultLookAndFeelDecorated(true);
 
         countText.setBounds(20,20,20,20);
-        countText.addActionListener(new ActionListener() {
-            @Override
 
-            String numberFromCount = countText.getText();
-            Integer countText = Integer.parseInt(numberFromCount);
-
-        });
 
         text.setBounds(50, 50, 500, 30);
         textField.setBounds(50, 100, 200, 30);
