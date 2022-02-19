@@ -1,11 +1,10 @@
 package de.test.de;
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import java.util.concurrent.ThreadLocalRandom;
 
+    // S T A T I S C H E   V A R I A B L E N
 public class Spiel {
     static Integer count = 0;
     static Integer myNumber = ThreadLocalRandom.current().nextInt(0, 100 + 1);
@@ -16,6 +15,10 @@ public class Spiel {
     public static void main(String[] args) {
         openUi();
     }
+
+
+
+    // H I E R     W I R D     D A S     F E N S T E R   G E N E R I E R T
 
     public static void openUi() {
         JFrame frame = new JFrame("Rate die Zahl!");
@@ -55,6 +58,14 @@ public class Spiel {
         frame.add(button);
         frame.setVisible(true);
 }
+
+
+
+
+
+
+    // T E X T F E L D
+
 
     public static void guess(Integer number) {
         if (number.equals(myNumber)) {
