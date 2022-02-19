@@ -11,7 +11,7 @@ public class Spiel {
     static Integer myNumber = ThreadLocalRandom.current().nextInt(0, 100 + 1);
     static JLabel text = new JLabel("Gebe eine Zahl zwischen 0 - 100 ein");
     static JTextField textField = new JTextField();
-    static JLabel countText = new JLabel("Versuche:"+String.valueOf(count));
+    static JLabel countText = new JLabel("Anzahl der Versuche: " + String.valueOf(count));
 
     public static void main(String[] args) {
         openUi();
@@ -24,7 +24,7 @@ public class Spiel {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setDefaultLookAndFeelDecorated(true);
 
-        countText.setBounds(20,20,100,20);
+        countText.setBounds(20,20,250,20);
 
 
         text.setBounds(50, 50, 500, 30);
@@ -58,16 +58,16 @@ public class Spiel {
 
     public static void guess(Integer number) {
         if (number.equals(myNumber)) {
-            text.setText("Richtig geraten! Du hast " + count + " versuche gebraucht!");
+            text.setText("Richtig geraten!");
         } else {
             count ++;
-            countText.setText("");
             if(number < myNumber) {
                 text.setText("Falsch geraten! Deine Zahl ist zu klein!");
             } else {
                 text.setText("Deine Zahl ist zu Groß!");
             }
             textField.setText("");
+            countText.setText(String.valueOf("Anzahl der Versuche: " + count));
 
         }
     }
