@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.concurrent.ThreadLocalRandom;
 
-    // S T A T I S C H E   V A R I A B L E N
+    // D A S    S P I E L    W I R D     G E N E R I E R T
 
 public class Spiel {
     static Integer count = 0;
