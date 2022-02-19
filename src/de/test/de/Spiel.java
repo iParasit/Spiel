@@ -47,7 +47,7 @@ public class Spiel {
                 try{
                     String textFromTextField = textField.getText();
                     Integer number = Integer.parseInt(textFromTextField);
-                    if(guess(number).equals(true)) {
+                    if(guess(number) == true) {
                         frame.remove(button);
                     }
                 } catch (Exception error){
