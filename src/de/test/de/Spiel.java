@@ -68,19 +68,24 @@ public class Spiel {
     // T E X T F E L D
 
 
-    public static void guess(Integer number) {
+    public static boolean guess(Integer number) {
         if (number.equals(myNumber)) {
             text.setText("Richtig geraten!");
+            return true;
 
         } else {
             count ++;
+            return false;
             if(number < myNumber) {
                 text.setText("Deine Zahl ist zu klein!");
+                return false;
             } else {
                 text.setText("Deine Zahl ist zu Groß!");
+                return false;
             }
             textField.setText("");
             countText.setText(String.valueOf("Anzahl der Versuche: " + count));
+
 
         }
     }
