@@ -19,7 +19,6 @@ public class Spiel {
 
 
     // H I E R     W I R D     D A S     F E N S T E R   G E N E R I E R T
-
     public static void openUi() {
         JFrame frame = new JFrame("Rate die Zahl!");
         frame.setSize(400, 400);
