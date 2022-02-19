@@ -62,7 +62,7 @@ public class Spiel {
         } else {
             count ++;
             if(number < myNumber) {
-                text.setText("Falsch geraten! Deine Zahl ist zu klein!");
+                text.setText("Deine Zahl ist zu klein!");
             } else {
                 text.setText("Deine Zahl ist zu Groß!");
             }
