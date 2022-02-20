@@ -1,5 +1,6 @@
 package de.test.de;
 import javax.swing.*;
+import java.awt.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 
@@ -21,18 +22,12 @@ public class Spiel {
         Gui.Gui();
     }
 
-
-    // H I E R     W I R D     D A S     F E N S T E R   G E N E R I E R T
-
-
-
-
-
     // T E X T F E L D
 
 
     public static boolean guess(Integer number) {
         if (number.equals(myNumber)) {
+            text.setForeground(Color.RED);
             text.setText("Richtig geraten!");
             return true;
 

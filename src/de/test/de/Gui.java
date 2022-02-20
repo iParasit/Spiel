@@ -3,18 +3,19 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import static de.test.de.Spiel.*;
 
 public class Gui {
 
 
     public static void Gui() {
-
-        frame.setSize(400, 400);
+        JFrame frame = new JFrame("Rate die Zahl!");
+        frame.setSize(360, 400);
+        frame.setResizable(false);
         frame.setLocation(100, 150);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setDefaultLookAndFeelDecorated(true);
+
 
         countText.setBounds(20,20,250,20);
 
@@ -33,6 +34,7 @@ public class Gui {
                     Integer number = Integer.parseInt(textFromTextField);
                     if(guess(number) == true) {
                         frame.remove(button);
+
                     }
                 } catch (Exception error){
                     text.setText("Bitte gebe eine Zahl ein!");
@@ -40,7 +42,6 @@ public class Gui {
 
             }
         });
-
 
         frame.add(countText);
         frame.add(text);
